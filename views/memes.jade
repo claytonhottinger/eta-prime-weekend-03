@@ -1,0 +1,7 @@
+extends layout
+
+block content
+
+	for elem in memes
+		p= elem.id
+		img(src="#{elem.url}")

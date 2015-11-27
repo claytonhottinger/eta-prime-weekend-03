@@ -1,11 +1,11 @@
 [
 	{
-		"id":"magnet",
-		"url":"/images/are-you-a-magnet.jpg"
-	},
-	{
 		"id":"wizard",
 		"url":"/images/areyouawizard.png"
+	},
+	{
+		"id":"magnet",
+		"url":"/images/are-you-a-magnet.jpg"
 	},
 	{
 		"id":"batman",
@@ -22,5 +22,5 @@
 	{
 		"id":"relevant",
 		"url":"/images/relevant-to-my-interests.jpg"
-	},
+	}
 ]
