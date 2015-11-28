@@ -11,6 +11,7 @@ var comments = require('./routes/comments');
 
 var app = express();
 
+app.set('json spaces', 2);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -22,6 +23,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/jquery', express.static(path.join(__dirname,
+  'node_modules/jquery/dist')));
 
 app.use('/', routes);
 app.use('/memes', memes);

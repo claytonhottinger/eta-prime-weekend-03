@@ -4,7 +4,6 @@ var memes = require('../public/data/memes.json');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  console.log(memes);
   res.render('memes', {title: 'Teh Memes', memes: memes});
 });
 

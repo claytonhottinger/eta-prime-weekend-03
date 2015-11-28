@@ -3,5 +3,9 @@ extends layout
 block content
 
 	for elem in memes
-		p= elem.id
 		img(src="#{elem.url}")
+		<br>
+		form(class="#{elem.id}")
+			input(type="text" name="message" placeholder="Comment here...")
+			input(type="submit")
+		<br>
