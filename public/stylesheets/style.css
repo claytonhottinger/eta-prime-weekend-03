@@ -3,6 +3,20 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+header {
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+
 a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
   color: #00B7FF;
+}
+
+div {
+  float: left;
+  width: 40%;
+  margin: 20px;
 }

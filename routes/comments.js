@@ -7,12 +7,14 @@ var path = require('path');
 /* GET users listing. */
 router.get('/:id?', function(req, res, next) {
   if (req.params.id !== undefined) {
+    console.log(req.params.id);
     var matchedComments = [];
     for (var i = 0; i < comments.length; i++) {
       if (comments[i].imageId === req.params.id) {
         matchedComments.push(comments[i]);
       }
     }
+    console.log(matchedComments);
     res.send(matchedComments);
   } else {
     res.send([]);
