@@ -1,4 +1,9 @@
 $(function() {
+
+  /*
+  * Iterates through each form and appends current
+  * comments to the dom
+  */
   $('form').each(function() {
     var id = $(this).attr('class');
     var dest = '/comments/' + id;
@@ -13,6 +18,10 @@ $(function() {
     });
   });
 
+  /*
+  * Sends comment for server to write to json,
+  * appends new comment to DOM
+  */
   $('form').on('submit', function(event) {
     event.preventDefault();
     var temp = $(this).serializeArray();
