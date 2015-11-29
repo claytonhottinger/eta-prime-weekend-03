@@ -24,7 +24,7 @@ $(function() {
       data: newComment
     }).done(function(data) {
       var $p = $('<p>');
-      console.log($(this));
+      console.log(data);
       $p.text(data.message);
       $('.' + data.imageId).append($p);
     });

@@ -23,19 +23,23 @@ router.get('/:id?', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var newComment = {imageId: req.body.imageId, message: req.body.message};
-  comments.push(newComment);
-  var string = JSON.stringify(comments);
-  var filePath = path.join(__dirname, '../public/data/comments.json');
-  fs.writeFile(filePath, string, function(err) {
-    if (err) {
-      // if there is an error, "next" middleware will handle it.
-      // Next in our case is the error handler in app.js
-      next(err);
-    } else {
-      // it's all good! Send the object back.
-      res.send(newComment);
-    }
-  });
+  if (newComment.imageId && newComment.message) {
+    comments.push(newComment);
+    console.log(newComment);
+    var string = JSON.stringify(comments);
+    var filePath = path.join(__dirname, '../public/data/comments.json');
+
+    fs.writeFile(filePath, string, function(err) {
+      if (err) {
+        // if there is an error, "next" middleware will handle it.
+        // Next in our case is the error handler in app.js
+        next(err);
+      } else {
+        // it's all good! Send the object back.
+        res.send(newComment);
+      }
+    });
+  }
 });
 
 module.exports = router;
