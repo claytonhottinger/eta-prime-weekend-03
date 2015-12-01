@@ -7,7 +7,11 @@ html
     script(src='/javascripts/script.js')
   
   header
-    <a href="/memes">These are a Few of My Favorite Memes</a>
-    
+    a(href="/memes") These are a Few of My Favorite Memes
+    h1 Upload one of yours
+    form(id="newMeme")
+      input(type="file" name="newMeme")
+      input(type="text" name="ID" placeholder="Name it too")
+      input(type="submit")
       
   block content

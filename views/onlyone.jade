@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-	img(src="#{meme.url}")
+	img(style="width: 500px" src="#{meme.url}")
 	<br>
 	form(class="#{meme.id}")
 		input(type="text" name="message" placeholder="Comment here...")
