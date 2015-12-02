@@ -1,6 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  
+
+	for elem in memes
+		div(id="#{elem.id}")
+			a(href="/memes/#{elem.id}")
+				img(src="#{elem.url}")
+			<br>
+			form(class="#{elem.id}")
+				input(type="text" name="message" required placeholder="Comment here...")
+				input(type="submit")
+			<br>
